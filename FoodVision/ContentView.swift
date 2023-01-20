@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ContentView : View {
     var body: some View {
@@ -15,23 +16,34 @@ struct ContentView : View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    
+
+    @ObservedObject var viewModel = ClassifyViewModel()
+
     func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
+        viewModel.arView = ARView(frame: .zero)
         
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
         
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
+        viewModel.arView.scene.anchors.append(boxAnchor)
+        return viewModel.arView
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
-    
+
+    func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
+
+        let labelNode = SKLabelNode(text: self.viewModel.classification)
+        labelNode.horizontalAlignmentMode = .center
+        labelNode.verticalAlignmentMode = .center
+        return labelNode;
+
+    }
+
+    func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        viewModel.touchBegan()
+    }
 }
 
 #if DEBUG
