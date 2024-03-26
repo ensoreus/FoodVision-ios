@@ -13,7 +13,7 @@
 		CF925E4E2902C3C000261BCA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF925E4D2902C3C000261BCA /* Experience.rcproject */; };
 		CF925E502902C3C100261BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF925E4F2902C3C100261BCA /* Assets.xcassets */; };
 		CF925E532902C3C100261BCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF925E522902C3C100261BCA /* Preview Assets.xcassets */; };
-		CF925E5C2902CA0500261BCA /* FoodVisionBig.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CF925E5B2902CA0500261BCA /* FoodVisionBig.mlmodel */; };
+		CF99531A2BB2C7D0003E9FDC /* FoodVisionBig.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CF9953192BB2C7D0003E9FDC /* FoodVisionBig.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		CF925E4D2902C3C000261BCA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		CF925E4F2902C3C100261BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF925E522902C3C100261BCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CF925E5B2902CA0500261BCA /* FoodVisionBig.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FoodVisionBig.mlmodel; path = ../../../../ml/tensorflow/FoodVision/FoodVisionBig.mlmodel; sourceTree = "<group>"; };
+		CF9953192BB2C7D0003E9FDC /* FoodVisionBig.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodVisionBig.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		CF925E482902C3C000261BCA /* FoodVision */ = {
 			isa = PBXGroup;
 			children = (
-				CF925E5B2902CA0500261BCA /* FoodVisionBig.mlmodel */,
+				CF9953192BB2C7D0003E9FDC /* FoodVisionBig.mlmodel */,
 				CF925E492902C3C000261BCA /* AppDelegate.swift */,
 				CF925E4B2902C3C000261BCA /* ContentView.swift */,
 				CF4F090B297ACBB600781024 /* ClassifyViewModel.swift */,
@@ -148,9 +148,9 @@
 			files = (
 				CF925E4C2902C3C000261BCA /* ContentView.swift in Sources */,
 				CF925E4A2902C3C000261BCA /* AppDelegate.swift in Sources */,
+				CF99531A2BB2C7D0003E9FDC /* FoodVisionBig.mlmodel in Sources */,
 				CF925E4E2902C3C000261BCA /* Experience.rcproject in Sources */,
 				CF4F090C297ACBB600781024 /* ClassifyViewModel.swift in Sources */,
-				CF925E5C2902CA0500261BCA /* FoodVisionBig.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
